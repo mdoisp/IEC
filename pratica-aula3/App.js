@@ -10,8 +10,8 @@ class App extends Component{
   render(){
     return(
       <View>
-        <Text>Olá mundo</Text>
-        <Text>Meu primeiro app</Text>
+        <Text>Hello World</Text>
+        <Text>My first project</Text>
         <Text style={{ Color: '#FF0000', fontSize: 25, margin: 15}}>
           Programador
         </Text>
