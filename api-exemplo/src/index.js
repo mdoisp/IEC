@@ -3,6 +3,12 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
+/*
+  Correções de bugs existentes no código
+  EXEMPLO
+  Alterando a porta pois de acesso pois a mesma estava dando erros de compilação...
+*/
+
 app.use(express.json());
 
 app.get('/api', (req, res) => {
