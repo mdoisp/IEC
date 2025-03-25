@@ -43,7 +43,7 @@ jobs:
           password: ${{ secrets.EMAIL_PASS }}
           subject: "🚨 Falha no Build - GitHub Actions"
           body: "O build falhou no repositório: ${{ github.repository }}\nCommit: ${{ github.sha }}"
-          to: seuemail@example.com
+          to: ${{ secrets.EMAIL_USER }}
           from: GitHub Actions
 
   release:
