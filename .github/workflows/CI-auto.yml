@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout do código
         uses: actions/checkout@v3
+        with:
+          path: api-exemplo
 
       - name: Configurar Node.js
         uses: actions/setup-node@v3
@@ -29,12 +31,15 @@ jobs:
 
       - name: Instalar dependências
         run: npm install
+        working-directory: api-exemplo
 
       - name: Construir aplicação
         run: npm run build
+        working-directory: api-exemplo
 
       - name: Executar testes
         run: npm test
+        working-directory: api-exemplo
 
       - name: Enviar e-mail falha
         if: failure()
