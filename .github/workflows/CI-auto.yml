@@ -16,11 +16,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Corrigir diretório
-        run: |
-          mv ${{ github.workspace }}/IEC/* ${{ github.workspace }}/
-          rm -rf ${{ github.workspace }}/IEC
-
       - name: Checkout do código
         uses: actions/checkout@v3
         with:
