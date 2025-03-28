@@ -26,8 +26,12 @@ jobs:
         with:
           node-version: 18
 
+      - name: Listar arquivos para depuração
+        run: ls -la ${{ github.workspace }}
+
       - name: Instalar dependências
         run: npm install
+        working-directory: ${{ github.workspace }}
 
       - name: Construir aplicação
         run: npm run build
